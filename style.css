@@ -1,0 +1,599 @@
+
+/* =========================================================
+   SMARTBILL - PLAYFUL CASHIER / POS THEME
+   Background: Soft mint
+   Text: Dark charcoal
+   Accent: Teal, purple and orange
+   ========================================================= */
+
+/* ---------- COLOR SYSTEM ---------- */
+:root {
+    --sb-bg: #E4F2EC;
+    --sb-bg-soft: #F0F7F3;
+    --sb-card: #FFFFFF;
+    --sb-sidebar: #124B45;
+
+    --sb-text: #172D29;
+    --sb-text-soft: #405B54;
+    --sb-text-light: #FFFFFF;
+
+    --sb-primary: #087F73;
+    --sb-primary-hover: #06665D;
+    --sb-purple: #7152B9;
+    --sb-orange: #F4B544;
+    --sb-pink: #F3A2B4;
+
+    --sb-border: #B8D5CA;
+    --sb-input-bg: #FFFFFF;
+    --sb-shadow: 0 5px 18px rgba(18, 75, 69, 0.10);
+}
+
+/* ---------- APP BACKGROUND ---------- */
+.stApp {
+    background: var(--sb-bg) !important;
+    color: var(--sb-text) !important;
+}
+
+[data-testid="stAppViewContainer"] {
+    background: var(--sb-bg) !important;
+}
+
+[data-testid="stMain"] {
+    background: transparent !important;
+}
+
+[data-testid="stMainBlockContainer"] {
+    color: var(--sb-text) !important;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* ---------- DEFAULT TEXT ---------- */
+.stApp,
+.stApp p,
+.stApp span,
+.stApp label,
+.stApp li,
+.stApp div,
+.stApp small {
+    color: var(--sb-text);
+}
+
+.stApp h1,
+.stApp h2,
+.stApp h3,
+.stApp h4,
+.stApp h5 {
+    color: #123C35 !important;
+    font-weight: 750 !important;
+}
+
+/* Links */
+.stApp a {
+    color: #075F56 !important;
+    font-weight: 600;
+}
+
+.stApp a:hover {
+    color: #56349E !important;
+}
+
+/* ---------- SIDEBAR ---------- */
+[data-testid="stSidebar"] {
+    background: var(--sb-sidebar) !important;
+    border-right: 3px solid #F4B544;
+}
+
+[data-testid="stSidebar"] > div {
+    background: var(--sb-sidebar) !important;
+}
+
+[data-testid="stSidebar"] * {
+    color: #FFFFFF !important;
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: #FFFFFF !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] {
+    color: #D5EBE3 !important;
+}
+
+/* Sidebar navigation */
+[data-testid="stSidebar"] [role="radiogroup"] label {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 12px;
+    padding: 9px 12px;
+    margin-bottom: 5px;
+    transition: all 0.2s ease;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] label:hover {
+    background: rgba(255, 255, 255, 0.17);
+}
+
+/* ---------- HEADER / HERO ---------- */
+.sb-hero {
+    background: linear-gradient(120deg, #D0ECE0, #FCE8B9);
+    border: 1px solid #B8D5CA;
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--sb-shadow);
+}
+
+.sb-hero h1,
+.sb-hero h2,
+.sb-hero p,
+.sb-hero span {
+    color: #173D35 !important;
+}
+
+/* ---------- CARDS ---------- */
+.sb-card,
+[data-testid="stMetric"],
+[data-testid="stExpander"] {
+    background: var(--sb-card) !important;
+    border: 1px solid var(--sb-border) !important;
+    border-radius: 16px !important;
+    box-shadow: var(--sb-shadow);
+}
+
+.sb-card {
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.sb-card h3,
+.sb-card p,
+.sb-card span {
+    color: var(--sb-text) !important;
+}
+
+.sb-section-label {
+    color: #087F73 !important;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ---------- METRICS ---------- */
+[data-testid="stMetric"] {
+    padding: 18px;
+}
+
+[data-testid="stMetricLabel"],
+[data-testid="stMetricLabel"] p {
+    color: #405B54 !important;
+    font-weight: 600 !important;
+}
+
+[data-testid="stMetricValue"],
+[data-testid="stMetricValue"] div {
+    color: #124B45 !important;
+    font-weight: 800 !important;
+}
+
+[data-testid="stMetricDelta"] {
+    font-weight: 600;
+}
+
+/* ---------- BUTTONS ---------- */
+/* Main buttons */
+.stApp div.stButton > button,
+.stApp div.stFormSubmitButton > button,
+.stApp button[kind="primary"],
+.stApp button[kind="secondary"] {
+    background: var(--sb-primary) !important;
+    color: #FFFFFF !important;
+    border: 2px solid var(--sb-primary) !important;
+    border-radius: 11px !important;
+    min-height: 42px;
+    padding: 8px 18px;
+    font-weight: 750 !important;
+    box-shadow: 0 3px 8px rgba(8, 127, 115, 0.15);
+    transition: all 0.18s ease;
+}
+
+.stApp div.stButton > button *,
+.stApp div.stFormSubmitButton > button *,
+.stApp button[kind="primary"] *,
+.stApp button[kind="secondary"] * {
+    color: #FFFFFF !important;
+}
+
+.stApp div.stButton > button:hover,
+.stApp div.stFormSubmitButton > button:hover,
+.stApp button[kind="primary"]:hover,
+.stApp button[kind="secondary"]:hover {
+    background: var(--sb-primary-hover) !important;
+    border-color: var(--sb-primary-hover) !important;
+    color: #FFFFFF !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(8, 127, 115, 0.23);
+}
+
+/* Focus visibility */
+.stApp button:focus-visible {
+    outline: 3px solid #F4B544 !important;
+    outline-offset: 3px !important;
+}
+
+/* ---------- LOGIN / REGISTER PAGE ---------- */
+
+/* Login container / form */
+[data-testid="stForm"] {
+    background: #FFFFFF !important;
+    border: 1px solid #A9CFC0 !important;
+    border-radius: 18px !important;
+    padding: 24px !important;
+    box-shadow: 0 8px 28px rgba(18, 75, 69, 0.12);
+}
+
+[data-testid="stForm"] label,
+[data-testid="stForm"] p,
+[data-testid="stForm"] span,
+[data-testid="stForm"] h1,
+[data-testid="stForm"] h2,
+[data-testid="stForm"] h3 {
+    color: #172D29 !important;
+}
+
+/* Login/Register tabs */
+.stApp [data-testid="stTabs"] [data-testid="stTab"] {
+    color: #263F38 !important;
+    background: #D5E9DF !important;
+    border-radius: 10px 10px 0 0;
+    font-weight: 750 !important;
+    padding: 10px 20px;
+}
+
+.stApp [data-testid="stTabs"] [data-testid="stTab"] p,
+.stApp [data-testid="stTabs"] [data-testid="stTab"] span {
+    color: #263F38 !important;
+}
+
+.stApp [data-testid="stTabs"] [aria-selected="true"] {
+    background: #087F73 !important;
+    color: #FFFFFF !important;
+    border-bottom: 3px solid #F4B544 !important;
+}
+
+.stApp [data-testid="stTabs"] [aria-selected="true"] p,
+.stApp [data-testid="stTabs"] [aria-selected="true"] span {
+    color: #FFFFFF !important;
+}
+
+/* Explicitly emphasize login/register form submit buttons */
+.stApp [data-testid="stForm"] button,
+.stApp [data-testid="stFormSubmitButton"] button {
+    background: #087F73 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #06665D !important;
+    border-radius: 10px !important;
+    font-weight: 800 !important;
+    min-height: 46px;
+    width: 100%;
+}
+
+.stApp [data-testid="stForm"] button *,
+.stApp [data-testid="stFormSubmitButton"] button * {
+    color: #FFFFFF !important;
+}
+
+.stApp [data-testid="stForm"] button:hover,
+.stApp [data-testid="stFormSubmitButton"] button:hover {
+    background: #06665D !important;
+    border-color: #06665D !important;
+}
+
+/* ---------- INPUTS ---------- */
+.stApp input,
+.stApp textarea {
+    background: #FFFFFF !important;
+    color: #172D29 !important;
+    border: 1.5px solid #91BCAF !important;
+    border-radius: 9px !important;
+    caret-color: #087F73 !important;
+}
+
+.stApp input::placeholder,
+.stApp textarea::placeholder {
+    color: #63766F !important;
+    opacity: 1 !important;
+}
+
+.stApp [data-baseweb="select"] > div {
+    background: #FFFFFF !important;
+    color: #172D29 !important;
+    border-color: #91BCAF !important;
+    border-radius: 9px !important;
+}
+
+.stApp [data-baseweb="select"] *,
+.stApp [data-baseweb="input"] *,
+.stApp [data-baseweb="textarea"] * {
+    color: #172D29 !important;
+}
+
+/* Dropdown popover */
+[data-testid="stPopover"],
+[data-baseweb="popover"],
+[data-baseweb="menu"] {
+    background: #FFFFFF !important;
+}
+
+[data-baseweb="menu"] *,
+[role="option"] {
+    color: #172D29 !important;
+}
+
+/* ---------- CHECKBOX / RADIO ---------- */
+.stApp [data-testid="stCheckbox"] label,
+.stApp [data-testid="stRadio"] label {
+    color: #172D29 !important;
+}
+
+/* ---------- TABLES / DATAFRAMES ---------- */
+[data-testid="stDataFrame"],
+[data-testid="stTable"] {
+    border: 1px solid #B8D5CA;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #FFFFFF;
+}
+
+.stApp table {
+    background: #FFFFFF !important;
+    color: #172D29 !important;
+    border-collapse: collapse;
+}
+
+.stApp th {
+    background: #D5E9DF !important;
+    color: #173D35 !important;
+    font-weight: 800 !important;
+}
+
+.stApp td {
+    color: #172D29 !important;
+    border-bottom: 1px solid #DCEAE3 !important;
+}
+
+/* ---------- TABS ---------- */
+.stApp [data-testid="stTabs"] [role="tabpanel"] {
+    background: transparent;
+    color: #172D29;
+    padding-top: 16px;
+}
+
+/* ---------- EXPANDERS ---------- */
+[data-testid="stExpander"] {
+    overflow: hidden;
+}
+
+[data-testid="stExpander"] summary {
+    color: #172D29 !important;
+    font-weight: 700;
+}
+
+/* ---------- ALERTS ---------- */
+[data-testid="stAlert"] {
+    border-radius: 12px !important;
+    border: 1px solid #C6D9CF !important;
+}
+
+[data-testid="stAlert"] p,
+[data-testid="stAlert"] span {
+    font-weight: 600;
+}
+
+/* ---------- BILLING / POS HELPERS ---------- */
+.pos-tile {
+    background: #FFFFFF;
+    border: 1.5px solid #B8D5CA;
+    border-radius: 15px;
+    padding: 16px;
+    box-shadow: var(--sb-shadow);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.pos-tile:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 24px rgba(18, 75, 69, 0.16);
+}
+
+.pos-tile-name {
+    color: #173D35 !important;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.pos-tile-price {
+    color: #087F73 !important;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.sb-total {
+    background: #D5F1E4;
+    color: #124B45 !important;
+    border: 2px solid #087F73;
+    border-radius: 14px;
+    padding: 18px;
+    font-size: 1.35rem;
+    font-weight: 900;
+}
+
+.sb-pill {
+    display: inline-block;
+    border-radius: 50px;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.sb-pill-success {
+    background: #D5F1E4;
+    color: #145C3E !important;
+}
+
+.sb-pill-warning {
+    background: #FFF0C7;
+    color: #704700 !important;
+}
+
+.sb-pill-danger {
+    background: #FFE0E3;
+    color: #8B1E2D !important;
+}
+
+.sb-receipt {
+    background: #FFFFFF;
+    border: 1px dashed #7FA99A;
+    border-radius: 12px;
+    padding: 20px;
+    color: #172D29 !important;
+    font-family: monospace;
+}
+
+/* ---------- DIVIDERS ---------- */
+.stApp hr {
+    border-color: #B8D5CA !important;
+}
+
+/* ---------- CAPTIONS ---------- */
+.stApp [data-testid="stCaptionContainer"],
+.stApp [data-testid="stCaptionContainer"] p {
+    color: #405B54 !important;
+}
+
+/* ---------- SCROLLBAR ---------- */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #E4F2EC;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #86B6A5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #087F73;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    [data-testid="stMainBlockContainer"] {
+        padding: 1rem;
+    }
+
+    [data-testid="stForm"] {
+        padding: 16px !important;
+    }
+
+    .sb-hero {
+        padding: 18px;
+    }
+}
+
+/* ---------- REDUCED MOTION ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+        transform: none !important;
+    }
+}
+
+/* =========================================
+   FIX: STREAMLIT BLACK TOP HEADER
+   ========================================= */
+
+/* Match the top toolbar with the page background */
+[data-testid="stHeader"] {
+    background: #E4F2EC !important;
+    color: #172D29 !important;
+}
+
+/* Header buttons and icons */
+[data-testid="stHeader"] button,
+[data-testid="stHeader"] svg {
+    color: #172D29 !important;
+    fill: #172D29 !important;
+}
+
+/* Toolbar area */
+[data-testid="stToolbar"] {
+    background: transparent !important;
+}
+
+/* Deploy and menu text */
+[data-testid="stHeader"] *,
+[data-testid="stToolbar"] * {
+    color: #172D29 !important;
+}
+
+/* Main application background */
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"] {
+    background: #E4F2EC !important;
+}
+
+/* =========================================
+   FIX: SIDEBAR USER DETAILS
+   ========================================= */
+
+[data-testid="stSidebar"] {
+    background: #0b8175 !important;
+}
+
+/* Sidebar text */
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] div,
+[data-testid="stSidebar"] strong {
+    color: #FFFFFF !important;
+}
+
+/* Username */
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p {
+    color: #FFFFFF !important;
+    font-weight: 750 !important;
+}
+
+/* Role caption */
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"],
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] p {
+    color: #020202 !important;
+    font-weight: 650 !important;
+}
+
+/* Logout button */
+[data-testid="stSidebar"] button {
+    background: #0D9488 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #65D9C8 !important;
+    border-radius: 12px !important;
+    font-weight: 750 !important;
+}
+
+[data-testid="stSidebar"] button * {
+    color: #FFFFFF !important;
+}
+
+
